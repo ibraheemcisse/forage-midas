@@ -1,6 +1,8 @@
 # Midas Core — JPMC Software Engineering Virtual Experience
 
 A financial transaction processing microservice built as part of the **JPMorgan Chase Software Engineering Virtual Experience** on Forage.
+<img width="1440" height="1144" alt="image" src="https://github.com/user-attachments/assets/76d0e6d8-6cc5-4d29-90bf-f561585dafda" />
+
 
 Midas Core is responsible for receiving, validating, and recording financial transactions at scale using Apache Kafka, Spring Boot, and JPA.
 
