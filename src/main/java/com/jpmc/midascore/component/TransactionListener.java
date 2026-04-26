@@ -10,8 +10,15 @@ import org.springframework.stereotype.Component;
 public class TransactionListener {
     static final Logger logger = LoggerFactory.getLogger(TransactionListener.class);
 
+    private final DatabaseConduit databaseConduit;
+
+    public TransactionListener(DatabaseConduit databaseConduit) {
+        this.databaseConduit = databaseConduit;
+    }
+
     @KafkaListener(topics = "${general.kafka-topic}")
     public void listen(Transaction transaction) {
         logger.info("Received transaction: {}", transaction);
+        databaseConduit.saveTransaction(transaction);
     }
 }
